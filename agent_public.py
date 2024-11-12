@@ -12,11 +12,8 @@ import tomllib
 from langchain_groq import ChatGroq
 import pandas as pd
 import datetime
-from streamlit_gsheets import GSheetsConnection
 from crewai_tools import SerperDevTool
 import time
-from pyairtable import Table
-
 
 # create title for the streamlit app
 
@@ -57,7 +54,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
     os.environ['SERPER_API_KEY'] = serper_api_key
 
     client = Groq()
-    GROQ_LLM = ChatGroq(model="llama3-70b-8192")
+    GROQ_LLM = ChatGroq(model_name="groq/llama3-8b-8192", temperature=0)
 
 
     # Create the search tool
@@ -102,7 +99,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
                                     'target_market': target_market
                                     },)
 
-    analysis = search_task.output.raw_output
+    analysis = search_task.output.raw
     st.markdown('## Competitor Analysis ##')
     st.write(analysis)
     time.sleep(30)
@@ -146,7 +143,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
                                     'analysis': analysis
                                     },)
 
-    optimization = optimization_task.output.raw_output
+    optimization = optimization_task.output.raw
 
     st.markdown('## Optimization Advice ##')
     st.write(optimization)
