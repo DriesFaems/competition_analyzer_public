@@ -12,4 +12,4 @@ openpyxl
 st-gsheets-connection
 pyairtable
 datetime
-pysqlite3
+pysqlite3-binary
