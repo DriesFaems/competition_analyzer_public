@@ -12,3 +12,4 @@ openpyxl
 st-gsheets-connection
 pyairtable
 datetime
+pysqlite3 >= 3.35.0.
