@@ -54,7 +54,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
     os.environ['SERPER_API_KEY'] = serper_api_key
 
     client = Groq()
-    GROQ_LLM = ChatGroq(model_name="groq/llama3-8b-8192", temperature=0)
+    GROQ_LLM = ChatGroq(model="llama3-70b-8192")
 
 
     # Create the search tool
@@ -99,7 +99,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
                                     'target_market': target_market
                                     },)
 
-    analysis = search_task.output.raw
+    analysis = search_task.output.raw_output
     st.markdown('## Competitor Analysis ##')
     st.write(analysis)
     time.sleep(30)
@@ -143,7 +143,7 @@ if st.button('Start Analysis; THe analysis will take several minutes to complete
                                     'analysis': analysis
                                     },)
 
-    optimization = optimization_task.output.raw
+    optimization = optimization_task.output.raw_output
 
     st.markdown('## Optimization Advice ##')
     st.write(optimization)
