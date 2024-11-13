@@ -1,6 +1,14 @@
-groq==0.11.0
-streamlit==1.40.1
-crewai==0.79.4
-crewai-tools==0.14.0
-langchain-groq==0.2.1
-pysqlite3-binary== 0.5.4
+crewai==0.28.8
+crewai-tools
+langchain_openai
+langchain
+langchain_community
+requests
+streamlit
+pysqlite3-binary
+faiss-cpu
+groq
+langchain-groq
+openpyxl
+st-gsheets-connection
+pyairtable
