@@ -3,3 +3,4 @@ streamlit==1.40.1
 crewai==0.79.4
 crewai-tools==0.14.0
 langchain-groq==0.2.1
+pysqlite3-binary== 0.5.4
