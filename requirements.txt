@@ -10,6 +10,4 @@ faiss-cpu
 groq
 langchain-groq
 openpyxl
-st-gsheets-connection
-pyairtable
 setuptools
