@@ -32,10 +32,14 @@ st.write(
 
 # --- Sidebar configuration --------------------------------------------------
 MODEL_OPTIONS = [
-    "llama3-8b-8192",
-    "llama3-70b-8192",
-    "mixtral-8x7b-32768",
-    "gemma-7b-it",
+    "llama-3.1-8b-instant",
+    "llama-3.3-70b-versatile",
+    "deepseek-r1-distill-llama-70b",
+    "llama-3.1-405b-reasoning",
+    "mistral-saba-24b",
+    "gemma2-9b-it",
+    "llama2-70b-4096",
+    "llama-guard-3-8b",
 ]
 
 with st.sidebar:
